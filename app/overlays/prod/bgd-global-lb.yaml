@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: bdg-global
+  labels:
+    app: bgd
+spec:
+  host: kcd-vrutkovs-demo.devcluster.openshift.com
+  to:
+    kind: Service
+    name: bgd
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  port:
+    targetPort: 8080
