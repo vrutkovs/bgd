@@ -7,7 +7,6 @@ metadata:
     app: bgd
   name: bgd
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: bgd
